@@ -1,0 +1,27 @@
+<div class="modal fade" id="addStudent" tabindex="-1" aria-labelledby="addStudentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addStudentModalLabel">New Student</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="studentForm" action="/add-student" method="post">
+                    <div class="row mt-3">
+                        <input type="text" name="name" placeholder="Name" class="form-control">
+                    </div>
+                    <div class="row mt-3">
+                        <input type="text" name="surname" placeholder="Surname" class="form-control">
+                    </div>
+                    <div class="row mt-3">
+                        <input type="number" name="exam" placeholder="Exam" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="studentForm">Add Student</button>
+            </div>
+        </div>
+    </div>
+</div>

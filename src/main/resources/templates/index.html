@@ -8,10 +8,14 @@
 
     <title>students-list</title>
 
-    <div th:insert="links.html"></div>
+    <div th:insert="~{links.html}"></div>
 </head>
 <body>
 <div>
+    <div class="container">
+        <div th:insert="~{header.html}"></div>
+    </div>
+
     <div class="container">
         <table class="table">
             <thead>
@@ -34,6 +38,8 @@
             </tbody>
         </table>
     </div>
+
+    <div th:insert="~{add-student.html}"></div>
 </div>
 </body>
 </html>
