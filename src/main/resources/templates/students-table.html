@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Surname</th>
+        <th scope="col">Exam</th>
+        <th scope="col">Mark</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr
+            th:each="student : ${students}"
+            th:classappend="${student.getMark() == 'F'} ? 'table-danger' : ''"
+    >
+        <th th:text="${student.getId()}"  scope="row"></th>
+        <td th:text="${student.getName()}"></td>
+        <td th:text="${student.getSurname()}"></td>
+        <td th:text="${student.getExam()}"></td>
+        <td th:text="${student.getMark()}"></td>
+    </tr>
+    </tbody>
+</table>
