@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>students-list</title>
+
+    <div th:insert="links.html"></div>
+</head>
+<body>
+<div>
+    <div class="container">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Exam</th>
+                <th scope="col">Mark</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="student : ${students}">
+                <th th:text="${student.getId()}" scope="row"></th>
+                <td th:text="${student.getName()}"></td>
+                <td th:text="${student.getSurname()}"></td>
+                <td th:text="${student.getExam()}"></td>
+                <td th:text="${student.getMark()}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
